@@ -7,7 +7,6 @@
 <head>
 
 
-  
    <meta charset="utf-8" />
 
 
@@ -18,26 +17,43 @@
        crossorigin="anonymous" />
 
 
-   <title></title>
+   <title> <?php echo $title; ?> </title>
+
+
    <style>
-    .bg-secondary {
-        background-color:black !important;
-    }
-    .copyright {
-        background-color:green;  
-    }
-    nav {
-        font-weight: 700;
-    }
-   
-    .bg-primary {
-        background-color:green !important
-    }
-    .img-card {
-        height: 18vw;
-        object-fit: cover;
-    }
-    </style>
+       .bg-secondary {
+           background-color: #2c3e50 !important;
+       }
+
+
+       .footer {
+           background-color: #1a252f;
+           position: absolute;
+           bottom: 0%;
+           right: 0%;
+           left: 0%;
+
+
+       }
+
+
+       .bg-primary {
+           background-color: #1abc9c !important;
+       }
+
+
+       nav {
+           font-weight: 700;
+       }
+
+
+       .img-card {
+           height: 18vw;
+           object-fit: cover;
+       }
+   </style>
+
+
 </head>
 
 
@@ -53,7 +69,7 @@
        <div class="container">
 
 
-           <a class="navbar-brand" href="#"></a>
+           <a class="navbar-brand" href="#"><?php echo $title; ?></a>
 
 
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -96,13 +112,17 @@
    </nav>
 
 
+
+
+
+
    <header class="masthead bg-primary text-white text-center py-4">
 
 
        <div class="container d-flex align-items-center flex-column">
 
 
-           <h2>Online Store Cart Page</h2>
+           <h2> <?php echo $subtitle; ?> </h2>
 
 
        </div>
@@ -114,7 +134,69 @@
    <!-- header -->
 
 
+
+
+
+
    <div class="container my-4">
+
+
+       <div class="container">
+
+
+           <div class="row">
+
+
+               <div class="col-lg-4 ms-auto">
+
+
+                   <p class="lead"> <?php echo $description; ?> </p>
+
+
+               </div>
+
+
+               <div class="col-lg-4 me-auto">
+
+
+                   <p class="lead"> <?php echo $author; ?> </p>
+
+
+               </div>
+
+
+           </div>
+
+
+       </div>
+
+
+   </div>
+
+
+   <div class=" py-4 text-center text-white footer">
+
+
+       <div class="container">
+
+
+           <small class="copyright">
+
+
+               Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
+                   href="https://twitter.com/user">
+
+
+                   FirstName LastName
+
+
+               </a> - <b>XYZ Company</b>
+
+
+           </small>
+
+
+       </div>
 
 
    </div>
@@ -128,3 +210,5 @@
 
 
 </html>
+
+

@@ -17,26 +17,12 @@
        crossorigin="anonymous" />
 
 
-   <title>Online Store</title>
-   <style>
-    .bg-secondary {
-        background-color:black !important;
-    }
-    .copyright {
-        background-color:green;  
-    }
-    nav {
-        font-weight: 700;
-    }
-   
-    .bg-primary {
-        background-color:green !important
-    }
-    .img-card {
-        height: 18vw;
-        object-fit: cover;
-    }
-    </style>
+   <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />
+
+
+   <title>@yield('title', 'Online Store')</title>
+
+
 </head>
 
 
@@ -52,7 +38,7 @@
        <div class="container">
 
 
-           <a class="navbar-brand" href="#">Online Store-About</a>
+           <a class="navbar-brand" href="#">Online Store</a>
 
 
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -71,17 +57,16 @@
                <div class="navbar-nav ms-auto">
 
 
-    
-               <a class="nav-link active" href="/">Home</a>
+                   <a class="nav-link active" href="{{route('home.index') }}">Home</a>
 
 
-<a class="nav-link active" href="/products">Products</a>
+                   <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
 
 
-<a class="nav-link active" href="/cart">Cart</a>
+                   <a class="nav-link active" href="/cart">Cart</a>
 
 
-<a class="nav-link active" href="/about">About</a>
+                   <a class="nav-link active" href="{{ route('home.about') }}">About</a>
 
 
                </div>
@@ -96,13 +81,17 @@
    </nav>
 
 
+
+
+
+
    <header class="masthead bg-primary text-white text-center py-4">
 
 
        <div class="container d-flex align-items-center flex-column">
 
 
-           <h2>About the Online Store</h2>
+           <h2>@yield('subtitle', 'A Laravel Online Store')</h2>
 
 
        </div>
@@ -114,7 +103,46 @@
    <!-- header -->
 
 
+
+
+
+
    <div class="container my-4">
+
+
+       @yield('content')
+
+
+   </div>
+
+
+
+
+
+
+   <div class=" py-4 text-center text-white footer">
+
+
+       <div class="container">
+
+
+           <small class="copyright">
+
+
+               Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
+                   href="https://twitter.com/user">
+
+
+                   Gashaw Taye
+
+
+               </a> - <b>Ministry of Defence</b>
+
+
+           </small>
+
+
+       </div>
 
 
    </div>
