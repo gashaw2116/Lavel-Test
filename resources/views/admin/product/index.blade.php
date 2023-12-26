@@ -29,9 +29,12 @@
                         <td>{{$product->id}}</td>
                         <td>{{$product->name}}</td>
                         <td>
-                            <button class ="btn-primary">
+                            <a href="{{ route ('admin.product.edit',['id'=>$product->id]) }}">
+                 
+                        <button class ="btn btn-primary">
                             <i class ="bi-pencil"></i>
                         </button>
+                        </a>
                     </td>
                  <td>
                  

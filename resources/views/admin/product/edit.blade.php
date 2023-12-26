@@ -24,8 +24,6 @@
 
            <form method="POST" action="{{ route('admin.product.update', ['id' => $viewData['product']->id]) }}"
                enctype="multipart/form-data">
-
-
                @csrf
                @method('PUT')
 

@@ -64,7 +64,7 @@ class AdminProductController extends Controller
        $viewData = [];
  
        $viewData["title"] = "Admin Page - edit-Products-Online Store";
-       $viewData["products"] = Product::findOrFail($id);
+       $viewData["product"] = Product::findOrFail($id);
        return view('admin.product.edit')->with("viewData", $viewData);
     }
 
