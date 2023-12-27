@@ -79,3 +79,15 @@ Route::delete('/admin/products/{id}/delete','App\Http\Controllers\Admin\AdminPro
 //
 Route::get('/admin/products/{id}/edit','App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
 Route::put('/admin/products/{id}/update','App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
+//////
+Route::get('/posts/insert_with_image','App\Http\Controllers\Admin\AdminProductController@insertPostWithPostImage');
+Route::get('/posts/{postid}/post_image)','App\Http\Controllers\Admin\AdminProductController@getPostImage');
+////////
+
+Route::get('/employees/employee_report','App\Http\Controllers\PagesController@employee_report');
+Route::get('/posts/{id}/with_reprts','App\Http\Controllers\PagesController@@with_reprts');
+Route::get('/posts/{id}/with_employess','App\Http\Controllers\PagesController@@with_employess');
+
+
+
+
